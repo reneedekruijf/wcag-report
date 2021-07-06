@@ -1,0 +1,19 @@
+{
+  "name": "wcag-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel serve index.pug --open"
+  },
+  "keywords": [],
+  "author": "Renee de Kruijf <renee@webdesignpuntnl.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.0.0-beta.2"
+  }
+}
