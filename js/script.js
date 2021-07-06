@@ -1,0 +1,2 @@
+// import './wcagReport';
+import './wcagRules';
