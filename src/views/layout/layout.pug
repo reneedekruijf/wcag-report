@@ -39,9 +39,8 @@ html(lang="nl")
                 a(class="skip-main" href="#main") ga naar de inhoud
                 <!-- top logo -->
                 header(class="header")
-                    h1.header__logo__h1
-                        a(href=`${path}index.pug` class="header__logo__link")
-                            img(src=`${path}src/images/logo.svg`, width="145" height="150" alt="Toegankelijkheidonline")
+                    a(href=`${path}index.pug` class="header__logo__link")
+                        img(src=`${path}src/images/logo.svg`, width="145" height="150" alt="Toegankelijkheidonline")
                     .pageWrapper
                 main(class="main" id="main" tabindex="-1")
                     block content
