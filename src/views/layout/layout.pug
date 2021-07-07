@@ -1,0 +1,77 @@
+doctype html
+html(lang="nl")
+    block head
+        head
+            meta(charset="utf-8") 
+            meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes") 
+            meta(name="robots" content="all") 
+            meta(name="copyright" content="Copyright Toegankelijkheidonline Culemborg") 
+
+            meta(name="image" content="https://toegankelijkheidonline.nl/site-image.jpg")
+            meta(name="description" property="og:description" content=description)
+            meta(name="name" content=title)
+            meta(name="author" content="Renee de Kruijf")
+
+            //- link(rel="icon" href=`${path}../favicon/favicon.ico`)
+            //- link(rel="icon" href=`${path}../favicon/icon.svg` type="image/svg+xml")
+            //- link(rel="apple-touch-icon" href=`${path}../favicon/apple-touch-icon.png`)
+            //- link(rel="manifest" href=`${path}/manifest.webmanifest`)
+            
+            meta(name="twitter:card" content="summary")
+            meta(name="twitter:title" content=title)
+            meta(name="twitter:description" content=description)
+            meta(name="twitter:site" content="@reneedekruijf")
+            meta(name="twitter:creator" content="@reneedekruijf")
+            meta(name="twitter:image:src" content="https://toegankelijkheidonline.nl/site-image-preview.jpg")
+            
+            meta(name="title" property="og:title" content=description)
+            meta(property="og:type" content=`${type ? type : "Website"}`)
+            meta(name="image" property="og:image" content="https://toegankelijkheidonline.nl/site-image-preview.jpg")
+            meta(name="og:url" content="https://toegankelijkheidonline.nl/")
+            meta(name="og:site_name" content=title)
+            meta(name="og:locale" content="nl")
+
+            link(href=`${path}src/sass/style.scss` rel='stylesheet')
+
+            title #{title}
+        body
+            block header
+                a(class="skip-main" href="#main") ga naar de inhoud
+                <!-- top logo -->
+                header(class="header")
+                    h1.header__logo__h1
+                        a(href=`${path}index.pug` class="header__logo__link")
+                            img(src=`${path}src/images/logo.svg`, width="145" height="150" alt="Toegankelijkheidonline")
+                    .pageWrapper
+                main(class="main" id="main" tabindex="-1")
+                    block content
+            footer(class="footer")
+                div(class="footer__top")
+                    div(class="footer__top__adress")
+                        h3(class="footer__top__adress__heading") Toegankelijkheidonline
+                        address
+                            ul
+                                li(class="footer__top__adress__item")
+                                    span Culemborg
+                                li(class="footer__top__adress__item")
+                                    span kvk: 65789369
+                                li(class="footer__top__adress__item")
+                                    span btw: NL001955124B48
+                    div(class="footer__top__social")
+                        h3(class="footer__top__social__heading") Social Links
+                        ul(class="footer__top__social__list")
+                            li(class="footer__top__social__list__item")
+                                a(href="https://www.linkedin.com/in/reneedekruijf") 
+                                    span(class="footer__top__icon footer__top__icon--linkedin") Ga naar Linkedin 
+                            li(class="footer__top__social__list__item")
+                                a(href="https://twitter.com/reneedekruijf")
+                                    span(class="footer__top__icon footer__top__icon--twitter") Ga naar Twitter 
+                            li(class="footer__top__social__list__item")
+                                a(href="https://www.instagram.com/renee_de_kruijf/")
+                                    span(class="footer__top__icon footer__top__icon--instagram") Ga naar Instagram
+                div.footer__bottom__links
+                    //- a(class="footer__bottomLinks" href=(`${path}src/views/pages/privacy.pug`)) privacy
+                    //- a(class="footer__bottomLinks" href=(`${path}src/views/pages/voorwaarden.pug`)) voorwaarden
+            block script
+                script(src="src/js/script.js") 
+            

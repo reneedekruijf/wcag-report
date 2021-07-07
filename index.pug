@@ -1,15 +1,12 @@
-doctype html
-html(lang="nl")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes")
+extends src/views/layout/layout
 
-    link(rel="stylesheet", href="sass/style.scss")
-
-    title Rapport van
-
-  body
+block prepend head
+    - var page = "index"
+    - var title = "Toegankelijkheidonline"
+    - var description = "Toegankelijkheidonline Culemborg is gespecialiseerd in alles op het gebied van toegankelijkheid"
+    - var path = ""
+        
+block content
     div
       main
         h1 Rapport van
@@ -92,5 +89,4 @@ html(lang="nl")
                 td
                 td 
                   a(href="#") icoon
-    script(src="js/script.js") 
 
