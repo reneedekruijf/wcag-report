@@ -10,6 +10,7 @@
   "author": "Renee de Kruijf <renee@webdesignpuntnl.com>",
   "license": "MIT",
   "dependencies": {
+    "npm-check-updates": "^11.8.2",
     "parcel": "^2.0.0-nightly.753"
   },
   "devDependencies": {

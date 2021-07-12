@@ -1,7 +1,7 @@
-const evalData = require('../wcag/evaluation.json');
+const evalData = require('../../wcag/evaluation.json');
 
 ol = document.createElement('ol');
-const list = document.querySelector('.wcargReport').append(ol);
+// const list = document.querySelector('.wcargReport').append(ol);
 
 
 evalData.auditSample.forEach(item => {
@@ -11,6 +11,7 @@ evalData.auditSample.forEach(item => {
   let li = document.createElement('li');
   ol.appendChild(li);
 
-  li.innerHTML += criteria;
+  li.innerHTML += result;
 });
 
+console.log(evalData.auditSample[0]);
