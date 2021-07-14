@@ -1,2 +1,3 @@
-import './wcagReport';
+// import './wcagReport';
 // import './wcagRules';
+import './getContent';
