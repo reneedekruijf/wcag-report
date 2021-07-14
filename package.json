@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve index.pug --open"
+    "start": "parcel serve index.pug --open",
+    "converthtml": "html2pug < ./src/views/reports/report.html > ./src/views/pages/report.pug"
   },
   "keywords": [],
   "author": "Renee de Kruijf <renee@webdesignpuntnl.com>",
