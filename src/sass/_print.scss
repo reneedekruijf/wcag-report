@@ -1,0 +1,18 @@
+@media print {
+  .footer {
+    display: none;
+  }
+
+  .printButton,
+  .pdfButton {
+    display: none;
+  }
+
+  .list li span:first-child {
+    font-size: 2rem;
+  }
+
+  .list li span:nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
