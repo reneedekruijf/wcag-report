@@ -1,6 +1,15 @@
 const removeClasses = Array.from(document.querySelector('main').getElementsByTagName('*'));
 const lis = document.querySelectorAll('ol li');
 const main = document.querySelector('main');
+const buttons = document.querySelectorAll('button');
+const thirdColumns = document.querySelectorAll('table tr td:nth-child(4)');
+const thirdColumnsHeaders = document.querySelectorAll('table tr th:nth-child(4)');
+
+thirdColumnsHeaders.forEach(thirdColumnsHeader => thirdColumnsHeader.remove())
+thirdColumns.forEach(thirdColumn => thirdColumn.remove());
+
+
+buttons.forEach(button => button.style.display = 'none');
 
 removeClasses.forEach(item => {
   item.hasAttribute('class') ? item.removeAttribute('class') : null;
