@@ -1,11 +1,6 @@
 const removeClasses = Array.from(document.querySelector('main').getElementsByTagName('*'));
 const lis = document.querySelectorAll('ol li');
-const printButton = document.querySelector('.printButton');
-
-
-function printRapport() {
-  window.print();
-}
+const main = document.querySelector('main');
 
 removeClasses.forEach(item => {
   item.hasAttribute('class') ? item.removeAttribute('class') : null;
@@ -21,4 +16,7 @@ lis.forEach(li => {
   li.innerHTML = html;
 });
 
-printButton.addEventListener('click', printRapport);
+const printButton = `<button class="printButton">print rapport</button>`;
+const pdfButton = `<button class="pdfButton">opslaan als pdf</button>`;
+main.insertAdjacentHTML('beforeend', printButton);
+main.insertAdjacentHTML('beforeend', pdfButton);
