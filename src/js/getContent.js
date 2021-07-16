@@ -1,3 +1,7 @@
+const onlyContent = document.querySelector('main main').innerHTML;
+
+document.querySelector('main').innerHTML = onlyContent;
+
 const removeClasses = Array.from(document.querySelector('main').getElementsByTagName('*'));
 const lis = document.querySelectorAll('ol li');
 const main = document.querySelector('main');
