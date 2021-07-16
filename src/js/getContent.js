@@ -8,10 +8,12 @@ const main = document.querySelector('main');
 const buttons = document.querySelectorAll('button');
 const thirdColumns = document.querySelectorAll('table tr td:nth-child(4)');
 const thirdColumnsHeaders = document.querySelectorAll('table tr th:nth-child(4)');
+const h1 = document.querySelector('h1').innerText;
+const title = document.querySelector('title');
+const titleText = document.querySelector('title').innerText;
 
 thirdColumnsHeaders.forEach(thirdColumnsHeader => thirdColumnsHeader.remove())
 thirdColumns.forEach(thirdColumn => thirdColumn.remove());
-
 
 buttons.forEach(button => button.style.display = 'none');
 
@@ -33,3 +35,5 @@ const printButton = `<button class="printButton">print rapport</button>`;
 const pdfButton = `<button class="pdfButton">opslaan als pdf</button>`;
 main.insertAdjacentHTML('beforeend', printButton);
 main.insertAdjacentHTML('beforeend', pdfButton);
+
+title.innerText = h1;
